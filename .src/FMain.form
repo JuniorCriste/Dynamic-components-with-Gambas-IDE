@@ -1,0 +1,20 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,142,76)
+  Background = &HA0A0A0&
+  Foreground = &H000000&
+  Icon = Picture["icon:/64/add"]
+  Resizable = False
+  { gere ToolButton
+    MoveScaled(1,2,7,9)
+    Picture = Picture["icon:/32/game"]
+  }
+  { folha Frame
+    MoveScaled(10.7143,3,106,71)
+    Background = &HE0E0E0&
+  }
+  { listinha ListBox
+    MoveScaled(118,3,21,71)
+  }
+}

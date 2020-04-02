@@ -1,0 +1,66 @@
+' Gambas class file
+
+Public objIsImpossible As Object[]
+Public counter As Integer
+Public hor As Integer
+Public ver As Integer
+ Public count2 As Integer
+    
+
+Public Sub gere_Click()
+
+Dim count As Integer
+count = 0
+count2 = 0
+hor = 85
+ver = 30 
+    
+Repeat 
+  construir
+  count = count + 1
+  Until count = 864
+
+
+End
+
+Public Sub construir()
+  Dim letra As Button
+  '  randletra is a vector to create random letters
+  Dim randletra As String[] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "X", "Z", "K", "Y", "Z"]
+
+  
+    objIsImpossible = New Object[]
+    
+    
+   '  letra is a button create in runtime
+    letra = New Button(Me)
+   
+    letra.x = hor + 1
+    letra.y = ver 
+    letra.W = 20
+    letra.h = 20
+    letra.Font.Size = 10
+    randletra.Shuffle()
+    randletra.Join()
+    letra.Text = randletra.First
+    letra.Name = "letra" & CString(counter)
+     counter = counter + 1
+     hor = hor + 20
+     
+     count2 = count2 + 1
+     
+     listinha.add(letra.Name)
+          
+     If count2 > 35 Then
+     ver = ver + 20
+     hor = 85
+     
+     count2 = 0
+     Endif
+    
+    
+  
+  
+End
+
+
